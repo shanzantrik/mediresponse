@@ -21,37 +21,37 @@ export default function RemoteMedicalPage() {
 
   const features = [
     {
-      icon: Wifi,
+      icon: "Wifi",
       title: 'Telemedicine Consultations',
       description: 'Real-time video consultations with qualified medical professionals worldwide.',
       color: 'primary'
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: 'Remote Health Monitoring',
       description: 'Continuous monitoring of vital signs and health parameters remotely.',
       color: 'accent'
     },
     {
-      icon: Users,
+      icon: "Users",
       title: 'Digital Health Platforms',
       description: 'User-friendly digital platforms for seamless healthcare access.',
       color: 'secondary'
     },
     {
-      icon: Award,
+      icon: "Award",
       title: 'Medical Device Integration',
       description: 'Integration with medical devices for comprehensive remote care.',
       color: 'primary'
     },
     {
-      icon: Globe,
+      icon: "Globe",
       title: 'Global Connectivity',
       description: 'Reliable connectivity for remote locations worldwide.',
       color: 'accent'
     },
     {
-      icon: Clock,
+      icon: "Clock",
       title: 'Instant Access',
       description: 'Immediate access to medical professionals within minutes.',
       color: 'secondary'

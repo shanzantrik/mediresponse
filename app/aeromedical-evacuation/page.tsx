@@ -21,37 +21,37 @@ export default function AeromedicalEvacuationPage() {
 
   const features = [
     {
-      icon: Plane,
+      icon: "Plane",
       title: 'Air Ambulance Services',
       description: 'Specialized aircraft equipped with intensive care units for critical patient transport.',
       color: 'primary'
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: 'Critical Care Transport',
       description: 'Advanced life support and monitoring during air medical transport.',
       color: 'accent'
     },
     {
-      icon: Users,
+      icon: "Users",
       title: 'Medical Escort Teams',
       description: 'Experienced medical professionals accompanying patients during transport.',
       color: 'secondary'
     },
     {
-      icon: Award,
+      icon: "Award",
       title: 'International Flights',
       description: 'Cross-border and international medical evacuation services.',
       color: 'primary'
     },
     {
-      icon: Globe,
+      icon: "Globe",
       title: 'Ground Coordination',
       description: 'Seamless coordination between air and ground medical services.',
       color: 'accent'
     },
     {
-      icon: Clock,
+      icon: "Clock",
       title: 'Rapid Deployment',
       description: 'Quick deployment of air medical teams within 2-4 hours.',
       color: 'secondary'

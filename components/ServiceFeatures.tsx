@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { LucideIcon, Stethoscope, UserCheck, Settings, Phone, Building2, Heart } from 'lucide-react'
+import { LucideIcon, Stethoscope, UserCheck, Settings, Phone, Building2, Heart, Shield, Users, Award, Globe, Clock, Zap } from 'lucide-react'
 
 interface ServiceFeature {
   icon: string
@@ -17,7 +17,13 @@ const iconMap = {
   Settings,
   Phone,
   Building2,
-  Heart
+  Heart,
+  Shield,
+  Users,
+  Award,
+  Globe,
+  Clock,
+  Zap
 }
 
 interface ServiceFeaturesProps {

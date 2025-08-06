@@ -21,37 +21,37 @@ export default function GlobalAssistancePage() {
 
   const features = [
     {
-      icon: Phone,
+      icon: "Phone",
       title: '24/7 Medical Consultation',
       description: 'Round-the-clock access to qualified medical professionals for advice and guidance.',
       color: 'primary'
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: 'Emergency Medical Coordination',
       description: 'Rapid coordination of emergency medical services and hospital admissions.',
       color: 'accent'
     },
     {
-      icon: Users,
+      icon: "Users",
       title: 'Medical Escort Services',
       description: 'Professional medical escorts for safe travel during medical emergencies.',
       color: 'secondary'
     },
     {
-      icon: Award,
+      icon: "Award",
       title: 'Repatriation Assistance',
       description: 'Comprehensive support for returning patients to their home country.',
       color: 'primary'
     },
     {
-      icon: Globe,
+      icon: "Globe",
       title: 'Global Network',
       description: 'Access to our worldwide network of medical providers and facilities.',
       color: 'accent'
     },
     {
-      icon: Clock,
+      icon: "Clock",
       title: 'Rapid Response',
       description: 'Average response time of less than 15 minutes for all emergencies.',
       color: 'secondary'

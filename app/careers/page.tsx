@@ -1,4 +1,5 @@
 import { Users, Award, Globe, Heart, Zap, Shield } from 'lucide-react'
+import ServiceFeatures from '@/components/ServiceFeatures'
 import CTASection from '@/components/CTASection'
 
 export default function CareersPage() {
@@ -46,34 +47,40 @@ export default function CareersPage() {
 
   const benefits = [
     {
-      icon: Heart,
+      icon: "Heart",
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance and wellness programs'
+      description: 'Comprehensive health insurance and wellness programs',
+      color: 'primary'
     },
     {
-      icon: Award,
+      icon: "Award",
       title: 'Professional Growth',
-      description: 'Continuous learning and career development opportunities'
+      description: 'Continuous learning and career development opportunities',
+      color: 'secondary'
     },
     {
-      icon: Globe,
+      icon: "Globe",
       title: 'Global Exposure',
-      description: 'Work with international clients and partners worldwide'
+      description: 'Work with international clients and partners worldwide',
+      color: 'accent'
     },
     {
-      icon: Zap,
+      icon: "Zap",
       title: 'Flexible Work',
-      description: 'Remote work options and flexible scheduling'
+      description: 'Remote work options and flexible scheduling',
+      color: 'primary'
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: 'Job Security',
-      description: 'Stable company with growing market presence'
+      description: 'Stable company with growing market presence',
+      color: 'secondary'
     },
     {
-      icon: Users,
+      icon: "Users",
       title: 'Great Team',
-      description: 'Collaborative environment with experienced professionals'
+      description: 'Collaborative environment with experienced professionals',
+      color: 'accent'
     }
   ]
 
@@ -93,35 +100,11 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Culture Section */}
-      <section className="section-padding bg-white dark:bg-gray-900">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Culture
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              We're passionate about helping people in their time of need. Our team is driven by purpose, committed to excellence, and dedicated to making a positive impact.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceFeatures
+        title="Our Culture"
+        subtitle="We're passionate about helping people in their time of need. Our team is driven by purpose, committed to excellence, and dedicated to making a positive impact."
+        features={benefits}
+      />
 
       {/* Job Openings */}
       <section className="section-padding bg-gray-50 dark:bg-gray-800">

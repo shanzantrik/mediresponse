@@ -20,37 +20,37 @@ export default function AboutPage() {
 
   const features = [
     {
-      icon: Shield,
+      icon: "Shield",
       title: 'Mission & Vision',
       description: 'To provide reliable, professional medical assistance services that ensure safety and peace of mind for our clients worldwide.',
       color: 'primary'
     },
     {
-      icon: Users,
+      icon: "Users",
       title: 'Expert Team',
       description: 'Our team consists of experienced medical professionals, coordinators, and support staff dedicated to excellence.',
       color: 'accent'
     },
     {
-      icon: Award,
+      icon: "Award",
       title: 'Certifications',
       description: 'Internationally recognized certifications and accreditations for medical assistance and evacuation services.',
       color: 'secondary'
     },
     {
-      icon: Globe,
+      icon: "Globe",
       title: 'Global Network',
       description: 'Extensive network of medical providers, facilities, and partners across 150+ countries worldwide.',
       color: 'primary'
     },
     {
-      icon: Clock,
+      icon: "Clock",
       title: '24/7 Support',
       description: 'Round-the-clock emergency response and medical coordination services available anytime, anywhere.',
       color: 'accent'
     },
     {
-      icon: Award,
+      icon: "Award",
       title: 'Quality Assurance',
       description: 'Rigorous quality standards and continuous improvement processes to ensure the highest level of service.',
       color: 'secondary'
