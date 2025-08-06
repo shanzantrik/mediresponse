@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Phone, Mail, Clock, Shield } from 'lucide-react'
-import { motion } from 'framer-motion'
 import ContactForm from './ContactForm'
 
 export default function CTASection() {
@@ -14,54 +13,24 @@ export default function CTASection() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div className="space-y-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="flex items-center space-x-2 text-primary-100"
-              >
+              <div className="flex items-center space-x-2 text-primary-100">
                 <Shield className="w-5 h-5" />
                 <span className="text-sm font-medium">Ready to Get Started?</span>
-              </motion.div>
+              </div>
 
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-3xl md:text-4xl font-bold leading-tight"
-              >
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                 Get Your Free Quote Today
-              </motion.h2>
+              </h2>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-xl text-primary-100 leading-relaxed"
-              >
+              <p className="text-xl text-primary-100 leading-relaxed">
                 Contact us for a personalized quote and discover how our medical assistance services can provide peace of mind for your organization or personal needs.
-              </motion.p>
+              </p>
             </div>
 
             {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
+            <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent-400 rounded-full"></div>
                 <span className="text-primary-100">No setup fees or hidden costs</span>
@@ -74,16 +43,10 @@ export default function CTASection() {
                 <div className="w-2 h-2 bg-accent-400 rounded-full"></div>
                 <span className="text-primary-100">24/7 emergency support included</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
+            <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => setShowForm(true)}
                 className="btn-accent group flex items-center justify-center space-x-2"
@@ -99,17 +62,11 @@ export default function CTASection() {
                 <span>Contact Sales</span>
                 <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Column - Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="space-y-6">
                 <div className="text-center">
@@ -156,18 +113,13 @@ export default function CTASection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Contact Form Modal */}
         {showForm && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto"
-            >
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Get Your Quote</h3>
                 <button
@@ -178,7 +130,7 @@ export default function CTASection() {
                 </button>
               </div>
               <ContactForm onSuccess={() => setShowForm(false)} />
-            </motion.div>
+            </div>
           </div>
         )}
       </div>

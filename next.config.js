@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['mediresponse.co.za'],
+    domains: ['mediresponse.co.za', 'images.unsplash.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -9,7 +9,18 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
+  },
+  // Disable static generation for pages with complex client components
+  experimental: {
+    // This helps with the serialization issues
+    serverComponentsExternalPackages: ['framer-motion'],
   },
 }
 

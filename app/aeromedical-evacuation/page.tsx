@@ -6,6 +6,9 @@ import ServiceFeatures from '@/components/ServiceFeatures'
 import ServiceProcess from '@/components/ServiceProcess'
 import CTASection from '@/components/CTASection'
 
+// Force dynamic rendering to prevent static generation issues
+export const dynamic = 'force-dynamic'
+
 export default function AeromedicalEvacuationPage() {
   const heroData = {
     title: 'Aeromedical Evacuation',

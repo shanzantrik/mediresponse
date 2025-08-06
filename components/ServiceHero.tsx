@@ -3,7 +3,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, Phone, Mail } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 interface ServiceHeroProps {
   title: string
@@ -31,63 +30,33 @@ export default function ServiceHero({ title, subtitle, description, image, stats
       <div className="relative z-10 container-custom section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white space-y-8"
-          >
+          <div className="text-white space-y-8">
             <div className="space-y-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-primary-200 font-medium"
-              >
+              <div className="text-primary-200 font-medium">
                 {subtitle}
-              </motion.div>
+              </div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
-              >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 {title}
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="text-xl text-gray-200 leading-relaxed max-w-2xl"
-              >
+              <p className="text-xl text-gray-200 leading-relaxed max-w-2xl">
                 {description}
-              </motion.p>
+              </p>
             </div>
 
             {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="grid grid-cols-3 gap-6 py-6"
-            >
+            <div className="grid grid-cols-3 gap-6 py-6">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl font-bold text-primary-300">{stat.number}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
                 className="btn-accent group flex items-center justify-center space-x-2"
@@ -103,16 +72,11 @@ export default function ServiceHero({ title, subtitle, description, image, stats
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Column - Contact Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="text-center space-y-6">
                 <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto">
@@ -149,7 +113,7 @@ export default function ServiceHero({ title, subtitle, description, image, stats
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Phone, Mail, Clock, Shield, Heart, Users, Award, Star, ChevronLeft, ChevronRight } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 const heroSlides = [
   {
@@ -74,94 +73,51 @@ export default function HeroSection() {
 
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-20 h-20 bg-primary-500/20 rounded-full blur-xl"
-        />
-        <motion.div
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-40 right-20 w-16 h-16 bg-secondary-500/20 rounded-full blur-xl"
-        />
-        <motion.div
-          animate={{ x: [0, 15, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-40 left-20 w-12 h-12 bg-primary-500/30 rounded-full blur-lg"
-        />
+        <div className="absolute top-20 left-10 w-20 h-20 bg-primary-500/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-secondary-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-40 left-20 w-12 h-12 bg-primary-500/30 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Hero Text Section */}
       <div className="relative z-10 container-custom pt-32 pb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <div className="max-w-4xl mx-auto text-center">
           {/* Decorative Elements */}
           <div className="flex justify-center mb-8">
             <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"></div>
           </div>
 
           {/* Main Text */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="space-y-6"
-          >
-
+          <div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-left space-y-4"
-              >
+              <div className="text-left space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary-400 rounded-full mt-3 flex-shrink-0"></div>
                   <p className="text-lg text-gray-200 leading-relaxed">
                     We prioritise the well-being of your workforce and the resilience of your operations. Our services are designed to mitigate risk, respond effectively to medical incidents, and support compliance across diverse sectors and environments.
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.7, duration: 0.8 }}
-                className="text-left space-y-4"
-              >
+              <div className="text-left space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-secondary-400 rounded-full mt-3 flex-shrink-0"></div>
                   <p className="text-lg text-gray-200 leading-relaxed">
                     Backed by skilled personnel, clinical oversight, and dependable systems, we help organisations remain prepared, responsive, and focused on their core activities.
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-custom section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white space-y-8"
-          >
+          <div className="text-white space-y-8">
             {/* Emergency Badge and Slide Counter */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="flex items-center justify-between"
-            >
+            <div className="flex items-center justify-between">
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20">
                 <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium">24/7 Emergency Response</span>
@@ -171,17 +127,11 @@ export default function HeroSection() {
               <div className="text-white/80 text-sm font-medium">
                 {currentSlide + 1} / {heroSlides.length}
               </div>
-            </motion.div>
+            </div>
 
             {/* Main Content */}
             <div className="space-y-6">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
-              >
+              <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   <span className="block text-white">{heroSlides[currentSlide].title}</span>
                   <span className="block text-gradient">{heroSlides[currentSlide].subtitle}</span>
@@ -190,16 +140,11 @@ export default function HeroSection() {
                 <p className="text-xl text-gray-200 leading-relaxed max-w-2xl">
                   {heroSlides[currentSlide].description}
                 </p>
-              </motion.div>
+              </div>
             </div>
 
             {/* Stats Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="grid grid-cols-3 gap-6 py-6"
-            >
+            <div className="grid grid-cols-3 gap-6 py-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary-300">150+</div>
                 <div className="text-sm text-gray-300">Countries Served</div>
@@ -212,15 +157,10 @@ export default function HeroSection() {
                 <div className="text-3xl font-bold text-primary-300">5000+</div>
                 <div className="text-sm text-gray-300">Successful Evacuations</div>
               </div>
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
                 className="btn-primary group flex items-center justify-center space-x-2 text-lg px-8 py-4"
@@ -238,26 +178,17 @@ export default function HeroSection() {
                 <span>Our Services</span>
                 <ArrowRight className="w-6 h-6 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Right Column - Emergency Contact Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="emergency-card relative overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 bg-pattern opacity-10"></div>
 
               {/* Floating Icons */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute top-4 right-4 w-16 h-16 border-2 border-white/20 rounded-full"
-              />
+              <div className="absolute top-4 right-4 w-16 h-16 border-2 border-white/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
 
               <div className="relative z-10 text-center space-y-6">
                 <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto pulse-glow">
@@ -305,7 +236,7 @@ export default function HeroSection() {
               </div>
               <span className="text-white/80 text-sm">4.8 Based on 110 reviews</span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -331,12 +262,7 @@ export default function HeroSection() {
       </div>
 
       {/* Slider Navigation Dots */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="flex space-x-3">
           {heroSlides.map((_, index) => (
             <button
@@ -351,7 +277,7 @@ export default function HeroSection() {
             />
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
