@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mediresponse.co.za'),
   title: 'MediResponse - Global Medical Assistance & Evacuation Services',
   description: 'Professional medical assistance, aeromedical evacuation, and remote medical solutions worldwide. 24/7 emergency response and healthcare support.',
   keywords: 'medical assistance, aeromedical evacuation, remote medical solutions, emergency response, healthcare, medical evacuation',
