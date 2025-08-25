@@ -11,7 +11,7 @@ const services = [
     id: 'event-medical',
     title: 'Event Medical Solutions',
     description: 'Comprehensive medical support for events, concerts, and large gatherings.',
-    image: '/DSCF7423-scaled.jpg',
+    image: '/077-FireOps.jpg',
     icon: Users,
     color: 'primary'
   },
@@ -27,7 +27,7 @@ const services = [
     id: 'global-assistance',
     title: 'Global Assistance Services',
     description: 'Worldwide medical assistance and emergency response coordination.',
-    image: '/DSCF7434-scaled.jpg',
+    image: '/DSCF7094.jpg',
     icon: Globe,
     color: 'secondary'
   },
@@ -51,7 +51,7 @@ const services = [
     id: 'emergency-services',
     title: 'Emergency Medical Services',
     description: '24/7 emergency medical response and critical care services.',
-    image: '/DSCF7423-scaled.jpg',
+    image: '/DSCF7311-scaled.jpg',
     icon: Heart,
     color: 'secondary'
   }
